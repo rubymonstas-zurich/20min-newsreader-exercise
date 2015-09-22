@@ -1,7 +1,37 @@
-# TODO: 1. Create the news class
-# TODO: 2. Add a constructor which has the 'id' and the 'item' as arguments
-# TODO: 3. Add a method which returns the ID
-# TODO: 4. Add a method which returns the title of the item
-# TODO: 5. Add a method which returns the description of the item
-# TODO: 6. Add a method which returns the publication date of the item
-# TODO: 7. Add a method which returns the link of the item
+class News
+  def initialize(id, item)
+    @id = id
+    @item = item
+  end
+
+  def id
+    @id
+  end
+
+  def title
+    @item.title
+  end
+
+  def description
+    @item.description
+  end
+
+  def publication_date
+    @item.pubDate
+  end
+
+  def link
+    @item.link
+  end
+
+  def to_s
+    "#{id} - #{publication_date} - #{title}"
+  end
+
+  def print
+    puts title
+    puts publication_date
+    puts description
+    puts link
+  end
+end
