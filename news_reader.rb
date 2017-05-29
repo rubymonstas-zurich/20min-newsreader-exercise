@@ -11,7 +11,7 @@ class NewsReader
   end
 
   def print_list_item(item)
-    puts item
+    # TODO: Print the item to the console in the following format: id - publication date - title
   end
 
   def latest
@@ -23,21 +23,24 @@ class NewsReader
   end
 
   def rss_entries
-    rss = RSS::Parser.parse(NEWS_URL, false)
-    rss.items
+    # TODO: 1. Initialize the RSS parser with the NEWS_URL
+    # TODO: 2. Return the items from the RSS parser
   end
 
   def print(id)
     news_item = find(id)
     if news_item
-      news_item.print
+      puts news_item.title
+      puts news_item.publication_date
+      puts news_item.description
+      puts news_item.link
     else
       puts "News with id '#{id}' not found..."
     end
   end
 
   def find(id)
-    latest.find { |news| news.id == id }
+    # TODO: Find the news with the given ID
   end
 end
 
