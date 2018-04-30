@@ -2,7 +2,7 @@ require 'rss'
 require './news'
 
 class NewsReader
-  NEWS_URL = 'http://www.20min.ch/rss/rss.tmpl?type=channel&get=4'
+  NEWS_URL = 'https://api.20min.ch/rss/view/63'
 
   def print_latest
     latest.each do |item|
